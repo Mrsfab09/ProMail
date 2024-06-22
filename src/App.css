@@ -1,0 +1,31 @@
+:root {
+  --fontColor: rgba(0, 0, 0, 0.31);
+  --buttonColor: rgba(78, 100, 238, 1);
+  --shadows: rgba(0, 0, 0, 0.123);
+}
+
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+.container {
+  width: 1100px;
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 40px;
+  box-shadow: 0 5px 10px 1px var(--shadows);
+}
+.form {
+  width: 500px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  border: 1px solid black;
+}

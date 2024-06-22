@@ -1,0 +1,9 @@
+.logo {
+  width: 320px;
+  height: 100px;
+}
+.brand {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+}
