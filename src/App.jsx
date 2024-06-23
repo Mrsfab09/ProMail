@@ -1,14 +1,12 @@
 import "./App.css";
 import { Brand } from "./components/Brand/Brand";
-import { Input } from "./components/Input/Input";
+import { Form } from "./components/Form/Form";
 
 function App() {
   return (
     <div className="container">
       <Brand />
-      <div className="form">
-        <Input />
-      </div>
+      <Form formName={"Login"} value={"Sign Up"} />
     </div>
   );
 }

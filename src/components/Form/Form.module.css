@@ -1,0 +1,30 @@
+.wrapForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.form h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.span {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.623);
+}
+.span a {
+  font-weight: 600;
+  color: rgba(78, 100, 238, 1);
+  text-decoration: none;
+}
