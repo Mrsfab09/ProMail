@@ -28,3 +28,14 @@
   color: rgba(78, 100, 238, 1);
   text-decoration: none;
 }
+
+.span2 {
+  margin-top: 40px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.623);
+}
+.span2 a {
+  font-weight: 600;
+  color: rgba(78, 100, 238, 1);
+  text-decoration: none;
+}
