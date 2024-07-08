@@ -18,7 +18,8 @@
   width: fit-content;
 }
 
-.coolinput input[type="text"].input {
+.coolinput input[type="text"].input,
+.coolinput input[type="password"].input {
   padding: 11px 10px;
   font-size: 14px;
   border: 2px rgba(78, 100, 238, 1) solid;
@@ -26,6 +27,7 @@
   background: transparent;
 }
 
-.coolinput input[type="text"].input:focus {
+.coolinput input[type="text"].input:focus,
+.coolinput input[type="password"].input:focus {
   outline: none;
 }
