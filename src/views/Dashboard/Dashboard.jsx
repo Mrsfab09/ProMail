@@ -1,6 +1,6 @@
 import { Toaster } from "sonner";
 
-export function Home() {
+export function Dashboard() {
   return (
     <>
       <Toaster position="top-center" expand={true} />

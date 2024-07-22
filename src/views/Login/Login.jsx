@@ -1,11 +1,14 @@
 import styles from "./Login.module.css";
 
-import { Input } from "../Input/Input";
-import { Button } from "../Button/Button";
+import { Input } from "../../components/Input/Input";
+import { Button } from "../../components/Button/Button";
 
 import { Toaster, toast } from "sonner";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Container } from "../../components/Container/Container";
+import { Brand } from "../../components/Brand/Brand";
+import { Center } from "../../components/Center/Center";
 
 export function Login() {
   const [isUsername, setIsUsername] = useState("");
@@ -28,7 +31,7 @@ export function Login() {
           } else {
             if (resp.isPassword === isPassword) {
               toast.success("Success");
-              navigate("/home");
+              navigate("/dashboard");
             } else {
               toast.error("Please enter valid password");
             }
@@ -56,35 +59,40 @@ export function Login() {
   return (
     <>
       <Toaster position="top-center" expand={true} />
-      <div className={styles.wrapForm}>
-        <form
-          className={styles.form}
-          method="POST"
-          action=""
-          onSubmit={ProceedLogin}
-        >
-          <h2>Login</h2>
-          <Input
-            type={"text"}
-            name="Login"
-            value={isUsername}
-            onChange={(e) => setIsUsername(e.target.value)}
-          />
-          <Input
-            type={"password"}
-            name="Password"
-            value={isPassword}
-            onChange={(e) => setIsPassword(e.target.value)}
-          />
-          <Button name="Login in" type={"submit"} />
-        </form>
-        <span className={styles.span}>
-          You dont have an account?
-          <Link className={styles.link} to={"/register"}>
-            Sign Up
-          </Link>
-        </span>
-      </div>
+      <Center>
+        <Container>
+          <Brand />
+          <div className={styles.wrapForm}>
+            <form
+              className={styles.form}
+              method="POST"
+              action=""
+              onSubmit={ProceedLogin}
+            >
+              <h2>Login</h2>
+              <Input
+                type={"text"}
+                name="Login"
+                value={isUsername}
+                onChange={(e) => setIsUsername(e.target.value)}
+              />
+              <Input
+                type={"password"}
+                name="Password"
+                value={isPassword}
+                onChange={(e) => setIsPassword(e.target.value)}
+              />
+              <Button name="Login in" type={"submit"} />
+            </form>
+            <span className={styles.span}>
+              You dont have an account?
+              <Link className={styles.link} to={"/register"}>
+                Sign Up
+              </Link>
+            </span>
+          </div>
+        </Container>
+      </Center>
     </>
   );
 }

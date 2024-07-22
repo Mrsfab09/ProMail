@@ -8,10 +8,10 @@
 
 body,
 html {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.logo {
+  width: 220px;
+  height: 80px;
 }

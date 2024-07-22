@@ -1,16 +1,23 @@
 import "./App.css";
-import { Brand } from "./components/Brand/Brand";
-import { Container } from "./components/Container/Container";
-import { Login } from "./components/Login/Login";
-// import { Register } from "./components/Register/Register";
+import LOGO from "./assets/logo.png";
+// import { Button } from "./components/Button/Button";
+// import { Brand } from "./components/Brand/Brand";
+// import { Container } from "./components/Container/Container";
+// import { Login } from "./views/Login/Login";
 
 function App() {
   return (
-    <Container>
-      <Brand />
-      <Login />
-      {/* <Register /> */}
-    </Container>
+    <nav>
+      <div>
+        <img className="logo" src={LOGO} alt="logo" />
+      </div>
+      <ul>
+        <li>Features</li>
+        <li>FAQ</li>
+        <li>Contact</li>
+        <li></li>
+      </ul>
+    </nav>
   );
 }
 
