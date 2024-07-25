@@ -4,5 +4,16 @@
   justify-content: center;
   padding: 96px;
 }
-/* .featuresContent {
-} */
+.featuresContent {
+  width: 35rem;
+  text-align: center;
+}
+.featuresContent h2 {
+  font-size: 35px;
+  color: var(--heading);
+}
+.featuresContent p {
+  color: var(--fontHover);
+  margin-top: 15px;
+  overflow-wrap: break-word;
+}
