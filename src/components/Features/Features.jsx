@@ -1,3 +1,4 @@
+import { StepBar } from "../StepBar/StepBar";
 import styles from "./Features.module.css";
 
 export function Features() {
@@ -11,7 +12,7 @@ export function Features() {
           perferendis!
         </p>
       </div>
-      <div></div>
+      <StepBar />
     </section>
   );
 }

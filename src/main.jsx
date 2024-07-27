@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Register } from "./views/Register/Register.jsx";
 import { Dashboard } from "./views/Dashboard/Dashboard.jsx";

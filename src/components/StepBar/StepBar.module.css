@@ -1,0 +1,107 @@
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 55px;
+}
+.steps {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid rgba(128, 128, 128, 0.37);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle.activeCircle {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(
+        82.3deg,
+        rgba(150, 93, 233, 1) 10.8%,
+        rgba(99, 88, 238, 1) 94.3%
+      )
+      border-box;
+}
+.circle:hover {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(
+        82.3deg,
+        rgba(150, 93, 233, 1) 10.8%,
+        rgba(99, 88, 238, 1) 94.3%
+      )
+      border-box;
+}
+.circle img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+.progress {
+  position: absolute;
+  height: 4px;
+  width: 98%;
+  background-color: #22222242;
+  z-index: -1;
+}
+.indicator {
+  position: absolute;
+  height: 100%;
+  width: 98%;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+}
+
+/* Content */
+
+.content {
+  display: none;
+  margin-top: 20px;
+}
+
+.content.active {
+  display: block;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 3rem;
+}
+.wrapper img {
+  width: 450px;
+  height: 450px;
+}
+.wrapperContent {
+  width: 500px;
+}
+.wrapperContent h3 {
+  color: var(--heading);
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+.wrapperContent p {
+  color: var(--fontHover);
+}
+.activeCircle {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(
+        82.3deg,
+        rgba(150, 93, 233, 1) 10.8%,
+        rgba(99, 88, 238, 1) 94.3%
+      )
+      border-box;
+}
