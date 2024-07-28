@@ -7,9 +7,9 @@ export function Features() {
       <div className={styles.featuresContent}>
         <h2>Features</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-          accusantium voluptatum cupiditate qui vel modi quia nostrum ea libero
-          perferendis!
+          Our goal is to give you quick and easy access to your email. Your
+          messages and all your files sync across your devices, so you can
+          access them on the go.
         </p>
       </div>
       <StepBar />
