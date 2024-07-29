@@ -1,4 +1,5 @@
 import "./App.css";
+import { FAQ } from "./components/FAQ/Faq";
 import { Features } from "./components/Features/Features";
 import { Hero } from "./components/Hero/Hero";
 import { NavBar } from "./components/NavBar/NavBar";
@@ -10,6 +11,7 @@ function App() {
       <main>
         <Hero />
         <Features />
+        <FAQ />
       </main>
     </>
   );

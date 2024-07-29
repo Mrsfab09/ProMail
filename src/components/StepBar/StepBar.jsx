@@ -14,6 +14,8 @@ import SERVER_BRAND from "../../assets/Server.png";
 import CALENDAR_BRAND from "../../assets/Calendar.png";
 
 import { useEffect, useState } from "react";
+import { Step } from "../Step/Step";
+import { Content } from "../StepBarContent/Content";
 
 export function StepBar() {
   const [activeContent, setActiveContent] = useState(1);
@@ -27,106 +29,75 @@ export function StepBar() {
       setActiveContent((prevActiveContent) => {
         return prevActiveContent === 4 ? 1 : prevActiveContent + 1;
       });
-    }, 7000); // Zmieniaj co 5 sekund
+    }, 7000);
 
-    return () => clearInterval(interval); // Czyszczenie intervalu przy odmontowaniu komponentu
+    return () => clearInterval(interval);
   }, []);
 
+  const steps = [
+    { id: 1, icon: CHAT },
+    { id: 2, icon: SECURITY },
+    { id: 3, icon: CLOUD },
+    { id: 4, icon: SCHEDULE },
+  ];
+
+  const contents = [
+    {
+      id: 1,
+      brandImage: MAIL_BRAND,
+      title: "Fast Sending",
+      description:
+        "Our biggest advantage is that you can send messages even from the other side of the world. It's just seconds away with ProMail",
+    },
+    {
+      id: 2,
+      brandImage: SECURITY_BRAND,
+      title: "Strong Protection",
+      description:
+        "Another advantage is that we have the best protection of your data on the market. Send messages without worrying about your sensitive data",
+    },
+    {
+      id: 3,
+      brandImage: SERVER_BRAND,
+      title: "A lot of space for files",
+      description:
+        "With our file drive, you can store your photos, documents in a safe place. Each user gets up to 10 GB to use.",
+    },
+    {
+      id: 4,
+      brandImage: CALENDAR_BRAND,
+      title: "The best day planner",
+      description:
+        "With our planner you will plan and implement everything during the day. Thanks to notifications you will not forget anything you have planned.",
+    },
+  ];
+
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.steps}>
-          {[
-            { id: 1, icon: CHAT },
-            { id: 2, icon: SECURITY },
-            { id: 3, icon: CLOUD },
-            { id: 4, icon: SCHEDULE },
-          ].map(({ id, icon }) => (
-            <span
-              key={id}
-              className={`${styles.circle} ${
-                activeContent === id ? styles.activeCircle : ""
-              }`}
-              onClick={() => toggleContent(id)}
-            >
-              <img src={icon} alt="" />
-            </span>
-          ))}
-          <div className={styles.progress}>
-            <span className={styles.indicator}></span>
-          </div>
+    <div className={styles.container}>
+      <div className={styles.steps}>
+        {steps.map(({ id, icon }) => (
+          <Step
+            key={id}
+            id={id}
+            icon={icon}
+            isActive={activeContent === id}
+            onClick={toggleContent}
+          />
+        ))}
+        <div className={styles.progress}>
+          <span className={styles.indicator}></span>
         </div>
       </div>
-      <div
-        id="content-1"
-        className={`${styles.content} ${
-          activeContent === 1 ? styles.active : ""
-        }`}
-      >
-        <div className={styles.wrapper}>
-          <img src={MAIL_BRAND} alt="chat" />
-          <div className={styles.wrapperContent}>
-            <h3>Fast Sending</h3>
-            <p>
-              Our biggest advantage is that you can send messages even from the
-              other side of the world. It's just seconds away with ProMail
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        id="content-2"
-        className={`${styles.content} ${
-          activeContent === 2 ? styles.active : ""
-        }`}
-      >
-        <div className={styles.wrapper}>
-          <img src={SECURITY_BRAND} alt="chat" />
-          <div className={styles.wrapperContent}>
-            <h3>Strong Protection</h3>
-            <p>
-              Another advantage is that we have the best protection of your data
-              on the market. Send messages without worrying about your sensitive
-              data
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        id="content-3"
-        className={`${styles.content} ${
-          activeContent === 3 ? styles.active : ""
-        }`}
-      >
-        <div className={styles.wrapper}>
-          <img src={SERVER_BRAND} alt="chat" />
-          <div className={styles.wrapperContent}>
-            <h3>A lot of space for files</h3>
-            <p>
-              With our file drive, you can store your photos, documents in a
-              safe place. Each user gets up to 10 GB to use.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        id="content-4"
-        className={`${styles.content} ${
-          activeContent === 4 ? styles.active : ""
-        }`}
-      >
-        <div className={styles.wrapper}>
-          <img src={CALENDAR_BRAND} alt="chat" />
-          <div className={styles.wrapperContent}>
-            <h3>The best day planner</h3>
-            <p>
-              With our planner you will plan and implement everything during the
-              day. Thanks to notifications you will not forget anything you have
-              planned.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+      {contents.map((content) => (
+        <Content
+          key={content.id}
+          id={content.id}
+          activeContent={activeContent}
+          brandImage={content.brandImage}
+          title={content.title}
+          description={content.description}
+        />
+      ))}
+    </div>
   );
 }

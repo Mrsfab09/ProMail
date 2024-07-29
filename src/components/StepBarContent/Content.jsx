@@ -1,41 +1,20 @@
-import { useState } from "react";
+import styles from "./Content.module.css";
 
-export function Content() {
-  const [activeContent, setActiveContent] = useState(null);
+export function Content({ id, activeContent, brandImage, title, description }) {
   return (
-    <>
-      <div
-        id="content-1"
-        className={`${styles.content} ${
-          activeContent === 1 ? styles.active : ""
-        }`}
-      >
-        <p>Content for Chat</p>
+    <div
+      id={`content-${id}`}
+      className={`${styles.content} ${
+        activeContent === id ? styles.active : ""
+      }`}
+    >
+      <div className={styles.wrapper}>
+        <img src={brandImage} alt={title} />
+        <div className={styles.wrapperContent}>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
       </div>
-      <div
-        id="content-2"
-        className={`${styles.content} ${
-          activeContent === 2 ? styles.active : ""
-        }`}
-      >
-        <p>Content for Security</p>
-      </div>
-      <div
-        id="content-3"
-        className={`${styles.content} ${
-          activeContent === 3 ? styles.active : ""
-        }`}
-      >
-        <p>Content for Cloud</p>
-      </div>
-      <div
-        id="content-4"
-        className={`${styles.content} ${
-          activeContent === 4 ? styles.active : ""
-        }`}
-      >
-        <p>More Content for Chat</p>
-      </div>
-    </>
+    </div>
   );
 }
