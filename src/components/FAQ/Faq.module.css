@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 96px;
+  padding: 50px;
+  margin-bottom: 100px;
 }
 .faqContent {
   width: 35rem;
@@ -17,4 +18,23 @@
   color: var(--fontHover);
   margin-top: 15px;
   overflow-wrap: break-word;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.container img {
+  width: 450px;
+  height: 450px;
+  margin-top: 30px;
+}
+.accordion {
+  width: 400px;
+}
+.item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 20px;
+  color: var(--fontHover);
 }
