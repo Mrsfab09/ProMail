@@ -9,6 +9,9 @@ export function Hero() {
     <section className={styles.sectionHero}>
       <div className={styles.wrapper}>
         <div className={styles.hero}>
+          <div className={styles.heroImage}>
+            <img src={MAIL} alt="hero" />
+          </div>
           <div className={styles.heroContent}>
             <h1>A Simple Managing Email manager</h1>
             <p>
@@ -18,9 +21,6 @@ export function Hero() {
               Quaerat eius in sequi dolorum optio.
             </p>
             <Button name="Download" />
-          </div>
-          <div className={styles.heroImage}>
-            <img src={MAIL} alt="hero" />
           </div>
         </div>
       </div>
