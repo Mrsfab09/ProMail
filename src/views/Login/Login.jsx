@@ -11,6 +11,8 @@ import { Brand } from "../../components/Brand/Brand";
 import { Center } from "../../components/Center/Center";
 
 export function Login() {
+  // const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000/users/";
+
   const [isUsername, setIsUsername] = useState("");
   const [isPassword, setIsPassword] = useState("");
 
@@ -19,13 +21,11 @@ export function Login() {
   const ProceedLogin = (e) => {
     e.preventDefault();
     if (validate()) {
-      // console.log("Login");
       fetch("http://localhost:3000/users/" + isUsername)
         .then((res) => {
           return res.json();
         })
         .then((resp) => {
-          // console.log(resp);
           if (Object.keys(resp).length === 0) {
             toast.error("Please enter valid username");
           } else {

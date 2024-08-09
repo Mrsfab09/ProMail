@@ -4,6 +4,7 @@ import { Faq } from "./components/FAQ/Faq";
 import { Features } from "./components/Features/Features";
 import { Hero } from "./components/Hero/Hero";
 import { NavBar } from "./components/NavBar/NavBar";
+import { Opinions } from "./components/Opinions/Opinions";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Features />
         <Faq />
         <Cta />
+        <Opinions />
       </main>
     </>
   );
