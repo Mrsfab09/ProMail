@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: #030050c4;
+  color: white;
+  padding: 0 50px;
+}
+.logo {
+  width: 220px;
+  height: 80px;
+  margin-left: 300px;
+}
+.footerContent {
+  display: flex;
+  padding: 50px;
+}
+.footerList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
