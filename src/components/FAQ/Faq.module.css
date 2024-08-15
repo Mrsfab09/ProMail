@@ -1,23 +1,10 @@
 .faqSection {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 50px;
   margin-bottom: 100px;
 }
 .faqContent {
   width: 35rem;
   text-align: center;
-}
-.faqContent h2 {
-  font-size: 35px;
-  color: var(--heading);
-}
-.faqContent p {
-  color: var(--fontHover);
-  margin-top: 15px;
-  overflow-wrap: break-word;
 }
 .container {
   display: grid;

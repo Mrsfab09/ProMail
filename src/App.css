@@ -19,9 +19,33 @@ body {
 }
 
 :root {
+  --heading: rgba(37, 43, 70, 0.85);
+  --border: rgba(128, 128, 128, 0.37);
   --fontColor: rgba(0, 0, 0, 0.31);
   --fontHover: rgba(0, 0, 0, 0.51);
-  --buttonColor: rgba(78, 100, 238, 1);
+  --purple: rgba(78, 100, 238, 1);
   --shadows: rgba(0, 0, 0, 0.123);
-  --heading: hsla(229, 31%, 21%, 0.849);
+  --gradient: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+}
+
+h2 {
+  font-size: 35px;
+  color: var(--heading);
+}
+
+p {
+  color: var(--fontHover);
+  margin-top: 15px;
+  overflow-wrap: break-word;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

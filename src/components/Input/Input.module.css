@@ -8,7 +8,7 @@
 
 .coolinput label.text {
   font-size: 0.75rem;
-  color: rgba(78, 100, 238, 1);
+  color: var(--purple);
   font-weight: 600;
   position: relative;
   top: 0.5rem;
@@ -22,7 +22,7 @@
 .coolinput input[type="password"].input {
   padding: 11px 10px;
   font-size: 14px;
-  border: 2px rgba(78, 100, 238, 1) solid;
+  border: 2px solid var(--purple);
   border-radius: 5px;
   background: transparent;
 }

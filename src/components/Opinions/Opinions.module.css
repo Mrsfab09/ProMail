@@ -1,15 +1,6 @@
 .sectionOpinions {
-  position: relative;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 500px;
-}
-.sectionOpinions h2 {
-  font-size: 35px;
-  text-align: center;
-  color: var(--heading);
 }
 .wrapper {
   display: grid;
@@ -24,7 +15,7 @@
   max-width: 400px;
   padding: 45px;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.411);
+  box-shadow: 1px 1px 10px var(--shadows);
 }
 .itemLeft {
   align-self: flex-start;
@@ -45,6 +36,11 @@
   border-radius: 50%;
 }
 
+.itemRight,
+.itemLeft p {
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .wrapper {
     grid-template-columns: 1fr;
@@ -54,7 +50,7 @@
   }
 
   .item-right {
-    align-self: flex-start; /* Wyrównaj oba elementy do góry na małych ekranach */
-    margin-top: 20px; /* Dodaj odstęp między elementami */
+    align-self: flex-start;
+    margin-top: 20px;
   }
 }
