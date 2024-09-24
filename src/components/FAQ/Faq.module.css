@@ -3,25 +3,44 @@
   margin-bottom: 100px;
 }
 .faqContent {
-  width: 35rem;
+  width: 20rem;
   text-align: center;
 }
 .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container img {
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   margin-top: 30px;
 }
 .accordion {
-  width: 400px;
+  width: 300px;
 }
 .item {
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
   padding: 20px;
   color: var(--fontHover);
+}
+@media (min-width: 768px) {
+  .faqContent {
+    width: 35rem;
+    text-align: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+  .container img {
+    width: 450px;
+    height: 450px;
+    margin-top: 30px;
+  }
+  .accordion {
+    width: 400px;
+  }
 }

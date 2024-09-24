@@ -2,6 +2,13 @@
   padding: 96px;
 }
 .featuresContent {
-  width: 35rem;
+  width: 20rem;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .featuresContent {
+    width: 35rem;
+    text-align: center;
+  }
 }

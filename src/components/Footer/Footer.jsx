@@ -12,6 +12,7 @@ export function Footer() {
           <li>Contact</li>
         </ul>
       </div>
+      <p>© Copyright 2024</p>
     </footer>
   );
 }
